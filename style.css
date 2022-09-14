@@ -1,0 +1,16 @@
+section{
+    width:350px;
+    height: 400px;
+    margin:5px;
+    text-align: center;
+    display:inline-grid;
+    justify-items: center;
+}
+
+section>img{
+    max-width: 50%;
+    height: auto;
+    display:block;
+    margin:auto;
+
+}

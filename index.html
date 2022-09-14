@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>100% min kod ( ͡° ͜ʖ ͡°) ¯\_(ツ)_/¯</title>
+</head>
+<body>
+    
+<script>
+// Jag kanske har tagit "lite" inspiration för den här koden
+function cars(Image,name,model,year,price) {
+    this.image=Image;
+    this.name=name;
+    this.model=model;
+    this.year=year;
+    this.price=price;
+}
+
+var car1 = new cars('https://www.bmw.se/content/dam/bmw/common/all-models/8-series/coupe/2022/navigation/bmw-8series-coupe-modellfinder.png','BMW','8 series',2010,480000);
+var car2 = new cars('https://www.pngall.com/wp-content/uploads/5/Lamborghini-Aventador-PNG-File.png','Lamborghini Aventador','Aventador',2011,25000000);
+var car3 = new cars('https://w7.pngwing.com/pngs/523/441/png-transparent-mercedes-benz-cla-class-car-mercedes-benz-gla-class-mercedes-c-class-c-200-bmw-520d-se-compact-car-sedan-car.png','Mercedes-Benz','C 200 T d',2019,287000);
+var car4 = new cars('https://r-media.volkswagen.com/v1/VW/11A/2023/MP1/20220919/sv-SE-se/P8A1/UG/0HZ,0TD,1D0,1J2,1LC,1SB,1T9,1X1,2FM,2JC,31K,3A2,3CA,3D2,3FA,3GA,3L3,3LF,3NU,3QH,3S2,3T2,4A3,4E0,4GW,4I7,4KF,4N3,4S1,4UF,55K,5C0,5F1,5JA,5XJ,5ZF,6C2,6F5,6H0,6I1,6XP,7AA,7UT,7W0,7X2,7Y0,8AS,8IV,8M1,8RT,8VP,8ZQ,9IJ,9P4,9T1,A9Q,AV1,B0A,E0A,EL5,ER1,ES7,FT0,GW2,J9D,K8G,KA0,KH4,KS0,L0L,N4G,NI0,NZ4,QV3,QW5,U9E,UD3,VF4/D6MOFASideview/b19d7b4a-df80-487c-908a-47785dbb35fc/900dd1f220f6bb60a0d01f87b677b5d5df0e91f2047b919e764629913c276dbd.png?width=864','Volkswagen','GTX Comfort Plus 299hk',2012,190000);
+var car5 = new cars('https://w7.pngwing.com/pngs/286/411/png-transparent-2012-mercedes-benz-m-class-car-2012-mercedes-benz-c-class-mercedes-amg-mercedes-ml-compact-car-car-vehicle.png','Mercedes-Benz ML','Tronic Euro 6',2014,229900);
+var car6 = new cars('https://w7.pngwing.com/pngs/626/73/png-transparent-2018-porsche-macan-used-car-2015-porsche-macan-s-porsche-compact-car-car-automatic-transmission.png','Porsche Cayenne','Tiptronic S 300hk',2016,529500);
+var car7 = new cars('https://www.pngall.com/wp-content/uploads/2016/03/Dodge-Ram-2016-PNG.png','Dodge Ram','RAM 1500',2018,469500);
+var car8 = new cars('https://mbilargroup.nu/wp-content/uploads/2019/07/BMW-M760Li-xDrive-sedan-1.png','BMW 740','320hk M Sport Sv',2018,559900);
+var car9 = new cars('https://w7.pngwing.com/pngs/177/240/png-transparent-tesla-model-3-tesla-motors-car-electric-vehicle-tesla-model-3-compact-car-sedan-performance-car.png','Tesla','model3',2020,799800);
+var car10 = new cars('https://www.pngmart.com/files/1/Audi-A7-S-Line-PNG.png','Audi A7','QUATTRO S-LINE 3,0',2018,339900);
+
+var bilar =[car1, car2,car3,car4,car5,car6,car7,car8,car9,car10];
+
+bilar.forEach(skapabil);
+
+function skapabil(item){
+    var sec = document.createElement('section');
+
+    var img = document.createElement("img");
+    img.setAttribute('src',item.image);
+    sec.appendChild(img);
+
+    var namn = document.createElement("h1");
+    var txt = document.createTextNode(item.name);
+    namn.appendChild(txt);
+    sec.appendChild(namn);
+
+    var model = document.createElement("h4");
+    var txt = document.createTextNode(item.model);
+    model.appendChild(txt);
+    sec.appendChild(model);
+
+    var year = document.createElement("h3");
+    var txt = document.createTextNode(item.year);
+    year.appendChild(txt);
+    sec.appendChild(year);
+
+    var price = document.createElement("h5");
+    var txt = document.createTextNode(item.price);
+    price.appendChild(txt);
+    sec.appendChild(price);
+    document.body.appendChild(sec);
+}
+
+</script>
+
+</body>
+</html>
